@@ -3,7 +3,7 @@ McHack_Castaway
 
 McGill Hackathon application, Castaway.
 
-![Alt text](/path/to/Screenshots/blank.png "App in Zen")
+![Alt text](/Screenshots/blank.png "App in Zen")
 
 ![Alt text](/path/to/query.png "Entering directions to query")
 
