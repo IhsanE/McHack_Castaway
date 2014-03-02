@@ -1,4 +1,4 @@
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
@@ -14,21 +14,11 @@
         android:layout_height="80dp"
         android:id="@+id/destLoc"
         android:layout_gravity="center"
-        android:layout_marginRight="2dp"
         android:layout_x="52dp"
-        android:layout_y="289dp" />
-
-    <Button
-        android:layout_width="112dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:layout_gravity="right|center_vertical"
-        android:layout_marginRight="-4dp"
-        android:text="Send"
-        android:layout_marginLeft="-376dp"
-        android:layout_marginBottom="-37dp"
-        android:layout_x="254dp"
-        android:layout_y="457dp" />
+        android:layout_y="289dp"
+        android:layout_above="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp" />
 
     <EditText
         android:layout_width="274dp"
@@ -36,7 +26,10 @@
         android:layout_height="80dp"
         android:id="@+id/myLoc"
         android:layout_x="55dp"
-        android:layout_y="207dp"/>
+        android:layout_y="207dp"
+        android:layout_marginBottom="111dp"
+        android:layout_above="@+id/radioGroup"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -46,7 +39,9 @@
         android:id="@+id/textView"
         android:layout_x="162dp"
         android:layout_y="310dp"
-        android:fontFamily="sans-serif-condensed"/>
+        android:fontFamily="sans-serif-condensed"
+        android:layout_alignTop="@+id/destLoc"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -56,14 +51,19 @@
         android:id="@+id/textView2"
         android:layout_x="162dp"
         android:layout_y="225dp"
-        android:fontFamily="sans-serif-condensed"/>
+        android:fontFamily="sans-serif-condensed"
+        android:layout_alignTop="@+id/myLoc"
+        android:layout_centerHorizontal="true" />
 
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_x="30dp"
-        android:layout_y="387dp">
+        android:layout_y="387dp"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_toRightOf="@+id/linearLayout"
+        android:id="@+id/radioGroup">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -112,40 +112,72 @@
         android:layout_height="24dp"
         android:id="@+id/imageView2"
         android:layout_x="97dp"
-        android:layout_y="442dp" />
+        android:layout_y="442dp"
+        android:layout_below="@+id/imageView"
+        android:layout_toRightOf="@+id/linearLayout" />
 
-    <ImageView
-        android:layout_width="23dp"
-        android:layout_height="24dp"
-        android:id="@+id/imageView3"
-        android:layout_x="7dp"
-        android:layout_y="389dp"
-        android:background="@drawable/bus" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="387dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/linearLayout">
 
-    <ImageView
-        android:layout_width="23dp"
-        android:layout_height="24dp"
-        android:id="@+id/imageView4"
-        android:layout_x="9dp"
-        android:layout_y="421dp"
-        android:baselineAlignBottom="true"
-        android:background="@drawable/car" />
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:id="@+id/imageView3"
+            android:layout_x="122dp"
+            android:layout_y="464dp"
+            android:background="@drawable/bus" />
 
-    <ImageView
-        android:layout_width="23dp"
-        android:layout_height="24dp"
-        android:id="@+id/imageView5"
-        android:layout_x="9dp"
-        android:layout_y="453dp"
-        android:background="@drawable/cycle" />
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:id="@+id/imageView4"
+            android:layout_x="145dp"
+            android:layout_y="383dp"
+            android:baselineAlignBottom="true"
+            android:background="@drawable/car" />
 
-    <ImageView
-        android:layout_width="23dp"
-        android:layout_height="24dp"
-        android:id="@+id/imageView6"
-        android:layout_x="9dp"
-        android:layout_y="485dp"
-        android:background="@drawable/walk" /><![CDATA[
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:id="@+id/imageView5"
+            android:layout_x="194dp"
+            android:layout_y="385dp"
+            android:background="@drawable/cycle" />
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:id="@+id/imageView6"
+            android:layout_x="189dp"
+            android:layout_y="464dp"
+            android:background="@drawable/walk" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:background="@android:drawable/ic_menu_send"
+        android:layout_alignBottom="@+id/radioGroup"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/destLoc" /><![CDATA[
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -176,5 +208,10 @@
 
 
 
+
+
+
+
+
 ]]>
-</AbsoluteLayout>
+</RelativeLayout>
