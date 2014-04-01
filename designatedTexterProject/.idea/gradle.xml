@@ -5,12 +5,15 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/designatedTexter" />
           </set>
         </option>
+=======
+>>>>>>> c006142274e5f465b858005dc09134d2e78cad36
       </GradleProjectSettings>
     </option>
   </component>

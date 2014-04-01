@@ -164,7 +164,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
+<<<<<<< HEAD
         android:background="@drawable/send_idle"
+=======
+        android:background="@android:drawable/ic_menu_send"
+>>>>>>> c006142274e5f465b858005dc09134d2e78cad36
         android:layout_alignBottom="@+id/radioGroup"
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/destLoc" /><![CDATA[

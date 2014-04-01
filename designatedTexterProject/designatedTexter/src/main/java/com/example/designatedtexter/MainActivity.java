@@ -14,7 +14,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD
 import android.view.MotionEvent;
+=======
+>>>>>>> c006142274e5f465b858005dc09134d2e78cad36
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.CycleInterpolator;
@@ -48,6 +51,7 @@ public class MainActivity extends ActionBarActivity {
 
 
         final Button button = (Button) findViewById(R.id.button);
+<<<<<<< HEAD
 
 
         button.setOnTouchListener(new View.OnTouchListener() {
@@ -93,6 +97,43 @@ public class MainActivity extends ActionBarActivity {
                         return true;
                 }
                 return false;
+=======
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                   final TextView from = (TextView) findViewById(R.id.myLoc);
+                   final TextView to = (TextView) findViewById(R.id.destLoc);
+                    String startingLocation = (from.getText()).toString();
+                    String endingLocation = (to.getText()).toString();
+                    String transMode = "";
+
+                   final RadioButton bus = (RadioButton) findViewById( R.id.busButton);
+                   final RadioButton drive = (RadioButton) findViewById( R.id.driveButton);
+                   final RadioButton cycle= (RadioButton) findViewById( R.id.cycleButton);
+                   final RadioButton walk = (RadioButton) findViewById( R.id.walkButton);
+
+
+                if (bus.isChecked()) transMode = "Bus";
+                else if (drive.isChecked()) transMode = "Drive";
+                else if (cycle.isChecked()) transMode = "Cycle";
+                else if (walk.isChecked()) transMode = "Walk";
+
+
+                    if (startingLocation.equals("") | endingLocation.equals("")) toast.show();
+
+                    else{
+                    SmsManager sms = SmsManager.getDefault();
+                    sms.sendTextMessage("12892733720", null, transMode+" from "+startingLocation.trim()+" to "+endingLocation.trim(), null, null);
+                    from.setText("");
+                    to.setText("");
+                    sent.show();
+                    //289 273 3720
+                   //castAway
+                    }
+
+
+
+>>>>>>> c006142274e5f465b858005dc09134d2e78cad36
             }
         });
     }
